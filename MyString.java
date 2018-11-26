@@ -38,7 +38,7 @@ public class MyString implements CharSequence,Comparable<CharSequence>{
     return data[index];                     // returns what is in data in that index
   }
   public int compareTo(CharSequence o) {      //THROW EXCEPTIONS!!!!
-    for (int i = 0; i < data.length; i ++) {
+    for (int i = 0; i < data.length || i < o.length(); i ++) {
       if (data[i] - o.charAt(i) != 0){
         return data[i] - o.charAt(i);
       }

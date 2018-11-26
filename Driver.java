@@ -80,7 +80,7 @@ public class Driver {
 					}
 				}
 		// Testing MyString.compareTo()
-			/*for (int j = 0; j < cases.length; j++) {
+			for (int j = 0; j < cases.length; j++) {
 				c = cases[j];
 				d = new MyString(c);
 				try {
@@ -99,7 +99,7 @@ public class Driver {
 					e.printStackTrace();
 					return;
 				}
-			}*/
+			}
 		}
 		System.out.println("Your code passed every test. Well done!");
 	}
