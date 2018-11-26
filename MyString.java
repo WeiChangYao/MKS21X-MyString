@@ -29,6 +29,9 @@ public class MyString implements CharSequence,Comparable<CharSequence>{
     }
     return a;                               //returns new sequence
   }
+  public char charAt (int index){
+    return data[index];
+  }
   
       
 }
