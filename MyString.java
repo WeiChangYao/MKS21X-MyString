@@ -39,9 +39,15 @@ public class MyString implements CharSequence,Comparable<CharSequence>{
   }
   public int compareTo(CharSequence o) {      //THROW EXCEPTIONS!!!!
     for (int i = 0; i < data.length || i < o.length(); i ++) {
-      if (data[i] - o.charAt(i) != 0){
-        return data[i] - o.charAt(i);
+      if (data[i] - o.charAt(i) != 0){      //compares them by subtracting the sequence1's char to the sequence2's char
+        return data[i] - o.charAt(i);       //if it's not 0, return the non 0 number
       }
+    }
+    if (data.length > o.length()) {     //if everything so far is ==, check if one is longer 
+      return 1;
+    }
+    if (data.length < o.length()) {
+      return -1;
     }
     return 0;
   }
