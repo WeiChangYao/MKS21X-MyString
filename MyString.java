@@ -22,5 +22,13 @@ public class MyString implements CharSequence,Comparable<CharSequence>{
     }
     return size;
   }
-  public CharSequence
+  public CharSequence subSequence (int start, int end){
+    CharSequence a = "";                    //makes a new charsqeuence?
+    for (int i = start; i < end; i ++){     //adds what ever is in data to the new sequence
+      a.add(data[i]);                       
+    }
+    return a;                               //returns new sequence
+  }
+  
+      
 }
