@@ -1,12 +1,17 @@
 public class MyString implements CharSequence{ //,Comparable<CharSequence>{
   private char[] data;
-  public MyString(CharSequence s){       
-    char[] data = new char[s.length()];      //data is as long as the sequence
+  public MyString(CharSequence s){   
+    data = new char[s.length()];      //data is as long as the sequence
     for (int i = 0; i < s.length(); i++){
       data[i] = s.charAt(i);              //gets chars and puts it in data
     }
   }
   public String toString(){ 
+
+    /*if (data.length == 0) {
+      throw new NullPointerException();
+    } */  
+
     String myStringString = "";
     for (int i = 0; i < data.length; i++){
       myStringString += "" + data[i];       //adds thing in data
