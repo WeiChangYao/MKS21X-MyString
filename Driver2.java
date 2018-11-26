@@ -30,7 +30,7 @@ public class Driver2 {
       System.out.println(++c + ". subSequence(1,7) is not " + refStr.subSequence(1,7));
     }
 
-    /*if (testStr.compareTo(refStr) != 0) {
+    if (testStr.compareTo(refStr) != 0) {
       System.out.println(++c + ". compareTo() should return 0 in this case");
     }
 
@@ -45,7 +45,7 @@ public class Driver2 {
     if (testStr.compareTo(refStr) <= 0) {
       System.out.println(++c + ". compareTo() should return a positive in this case");
     }
-*/
+
     if (c == 0) {
       System.out.println("\nYour MyString passed all the tests. Good work!");
     } else {
