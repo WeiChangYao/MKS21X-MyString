@@ -15,9 +15,6 @@ public class MyString implements CharSequence{ //,Comparable<CharSequence>{
     String myStringString = "";
     for (int i = 0; i < data.length; i++){
       myStringString += "" + data[i];       //adds thing in data
-      if (i + 1 < data.length){
-        myStringString += ", ";             //adds a comma as long as it's not the last character
-      }
     }
     return myStringString;
   }
