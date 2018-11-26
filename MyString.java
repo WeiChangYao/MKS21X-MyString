@@ -7,11 +7,6 @@ public class MyString implements CharSequence{ //,Comparable<CharSequence>{
     }
   }
   public String toString(){ 
-
-    /*if (data.length == 0) {
-      throw new NullPointerException();
-    } */  
-
     String myStringString = "";
     for (int i = 0; i < data.length; i++){
       myStringString += "" + data[i];       //adds thing in data
@@ -26,6 +21,10 @@ public class MyString implements CharSequence{ //,Comparable<CharSequence>{
     return size;
   }
   public CharSequence subSequence (int start, int end){
+
+    if (start < 0 || end < 0 || end > data.length || start > end) //throws new index out of bounds if start or end is negative, if end is greater than length and if start is greater than end
+      throw new IndexOutOfBoundsException();                      //REMINDER FOR MY FUTURE SELF: I DONT NEED TO ADD {} WHEN I THROW ERROR STUFF!!!!!
+
     String a = "";                    //makes a new charsqeuence?
     for (int i = start; i < end; i ++){     //adds what is in data to the new sequence
       a = a + data[i];                       
@@ -33,7 +32,10 @@ public class MyString implements CharSequence{ //,Comparable<CharSequence>{
     return a;                               //returns new sequence
   }
   public char charAt (int index){
-    return data[index];
+    if (index < 0 || index >= data.length)   //throws exception if its negative or greater or equal to length
+      throw new IndexOutOfBoundsException();
+     
+    return data[index];                     // returns what is in data in that index
   }
   
       
