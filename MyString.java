@@ -1,13 +1,13 @@
-public class MyString implements CharSequence,Comparable<CharSequence>{
+public class MyString implements CharSequence{ //,Comparable<CharSequence>{
   private char[] data;
   public MyString(CharSequence s){       
-    char[] data = new char[s.length]      //data is as long as the sequence
+    char[] data = new char[s.length()];      //data is as long as the sequence
     for (int i = 0; i < s.length(); i++){
       data[i] = s.charAt(i);              //gets chars and puts it in data
     }
   }
-  public String toString{ 
-    String myStringString
+  public String toString(){ 
+    String myStringString;
     for (int i = 0; i < data.length; i++){
       myStringString += "" + data[i];       //adds thing in data
       if (i + 1 < data.length){
@@ -25,7 +25,7 @@ public class MyString implements CharSequence,Comparable<CharSequence>{
   public CharSequence subSequence (int start, int end){
     CharSequence a = "";                    //makes a new charsqeuence?
     for (int i = start; i < end; i ++){     //adds what ever is in data to the new sequence
-      a.add(data[i]);                       
+      a = a + data[i];                       
     }
     return a;                               //returns new sequence
   }
