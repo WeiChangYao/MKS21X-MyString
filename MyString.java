@@ -21,10 +21,9 @@ public class MyString implements CharSequence,Comparable<CharSequence>{
     return size;
   }
   public CharSequence subSequence (int start, int end){
-
-    if (start < 0 || end < 0 || end > data.length || start > end) //throws new index out of bounds if start or end is negative, if end is greater than length and if start is greater than end
-      throw new IndexOutOfBoundsException();                      //REMINDER FOR MY FUTURE SELF: I DONT NEED TO ADD {} WHEN I THROW ERROR STUFF!!!!!
-                                                                  //...wait but what if there's multiple...
+    if (start < 0 || end < 0 || end > data.length || start > end){ //throws new index out of bounds if start or end is negative, if end is greater than length and if start is greater than end
+      throw new IndexOutOfBoundsException();                       
+    }                                        
     String a = "";                    //makes a new charsqeuence?
     for (int i = start; i < end; i ++){     //adds what is in data to the new sequence
       a = a + data[i];                       
@@ -37,7 +36,10 @@ public class MyString implements CharSequence,Comparable<CharSequence>{
      
     return data[index];                     // returns what is in data in that index
   }
-  public int compareTo(CharSequence o) {      //THROW EXCEPTIONS!!!!
+  public int compareTo(CharSequence o) {  
+    if (o == null) {
+      throw new NullPointerException();
+    }   
     
     for (int i = 0; i < this.length() && i < o.length(); i ++) {
       if (data[i] - o.charAt(i) != 0){      //compares them by subtracting the sequence1's char to the sequence2's char
