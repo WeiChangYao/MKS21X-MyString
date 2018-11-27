@@ -50,7 +50,7 @@ public class MyString implements CharSequence,Comparable<CharSequence>{
       return 1;
     }
     if (this.length() < o.length()) {
-      return -1;
+      return -1;                              //testing codeanywhere.com
     }
     return 0;
   }
